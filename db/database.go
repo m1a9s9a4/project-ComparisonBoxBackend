@@ -1,34 +1,10 @@
 package db
 
 import (
-	"context"
-	"time"
-
 	"github.com/m1a9s9a4/comparison-box-api/conf"
 	driver "gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"gorm.io/gorm/logger"
 )
-
-type Session struct {
-	DryRun            bool
-	PrepareStmt       bool
-	WithConditions    bool
-	AllowGlobalUpdate bool
-	Context           context.Context
-	Logger            logger.Interface
-	NowFunc           func() time.Time
-}
-
-type Player struct {
-	gorm.Model
-	ID       int    `gorm:"primary_key" json:"id"`
-	Japanese string `json:"japanese"`
-	English  string `json:"english"`
-	Img      string `json:"img"`
-	TypeID   int    `json:"type_id"`
-	// Type     PlayerType
-}
 
 func Init() *gorm.DB {
 	session := createSession()

@@ -8,11 +8,12 @@ import (
 
 // DB作成用
 var (
-	USER string = ""
-	PASS string = ""
-	DB   string = ""
-	HOST string = ""
-	PORT string = ""
+	DBURL string
+	USER  string
+	PASS  string
+	DB    string
+	HOST  string
+	PORT  string
 )
 
 func SetEnv() error {
@@ -20,6 +21,7 @@ func SetEnv() error {
 	if err != nil {
 		return err
 	}
+	DBURL = os.Getenv("DATABASE_URL")
 	USER = os.Getenv("DB_USER")
 	PASS = os.Getenv("DB_PASSWORD")
 	DB = os.Getenv("DB_NAME")
