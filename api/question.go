@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/labstack/echo"
-	"github.com/m1a9s9a4/language_tournament/model"
+	"github.com/m1a9s9a4/comparison-box-api/model"
 	"gorm.io/gorm"
 )
 

@@ -1,4 +1,4 @@
-module github.com/m1a9s9a4/language_tournament
+module github.com/m1a9s9a4/comparison-box-api
 
 go 1.12
 

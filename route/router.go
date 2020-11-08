@@ -6,10 +6,10 @@ import (
 	echoMw "github.com/labstack/echo/middleware"
 
 	"github.com/labstack/echo"
-	"github.com/m1a9s9a4/language_tournament/api"
-	"github.com/m1a9s9a4/language_tournament/db"
+	"github.com/m1a9s9a4/comparison-box-api/api"
+	"github.com/m1a9s9a4/comparison-box-api/db"
 
-	myMw "github.com/m1a9s9a4/language_tournament/middleware"
+	myMw "github.com/m1a9s9a4/comparison-box-api/middleware"
 )
 
 func Init() *echo.Echo {

@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/m1a9s9a4/language_tournament/conf"
-	"github.com/m1a9s9a4/language_tournament/route"
+	"os"
+
+	"github.com/m1a9s9a4/comparison-box-api/conf"
+	"github.com/m1a9s9a4/comparison-box-api/route"
 )
 
 func main() {
 	conf.SetEnv()
 	router := route.Init()
-	router.Start(":8080")
+	router.Start(":" + os.Getenv("PORT"))
 }

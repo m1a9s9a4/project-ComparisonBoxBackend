@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/m1a9s9a4/language_tournament/conf"
+	"github.com/m1a9s9a4/comparison-box-api/conf"
 	driver "gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

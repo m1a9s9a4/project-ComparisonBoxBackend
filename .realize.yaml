@@ -8,10 +8,10 @@ schema:
   commands:
     install:
       status: true
-      method: go build -o ./language_tournament
+      method: go build -o ./comparison-box-api
     run:
       status: true
-      method: ./language_tournament
+      method: ./comparison-box-api
   watcher:
     extensions:
     - go
