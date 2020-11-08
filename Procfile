@@ -1,2 +1,2 @@
-cp: cp .env.production .env
+build: go build
 web: comparison-box-api
