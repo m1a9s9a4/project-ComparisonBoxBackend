@@ -1,6 +1,6 @@
 module github.com/m1a9s9a4/comparison-box-api
 
-go 1.12
+go 1.15
 
 require (
 	cloud.google.com/go v0.70.0 // indirect
