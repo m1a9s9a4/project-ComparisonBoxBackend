@@ -1,2 +1,1 @@
-build: go build
-web: comparison-box-api
+web: bin/comparison-box-api
