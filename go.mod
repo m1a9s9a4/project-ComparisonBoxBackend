@@ -1,5 +1,6 @@
 module github.com/m1a9s9a4/comparison-box-api
 
+// +heroku goVersion go1.15
 go 1.15
 
 require (
