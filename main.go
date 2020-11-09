@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/m1a9s9a4/comparison-box-api/conf"
 	"github.com/m1a9s9a4/comparison-box-api/route"
 )
@@ -8,11 +10,9 @@ import (
 func main() {
 	conf.SetEnv()
 	router := route.Init()
-	var port string
-	if conf.APPPORT != "" {
-		port = ":" + conf.APPPORT
-	} else {
-		port = ""
+	var port = conf.APPPORT
+	if port == "" {
+		port = os.Getenv("PORT")
 	}
-	router.Start(port)
+	router.Start(":" + port)
 }
