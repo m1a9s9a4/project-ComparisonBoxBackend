@@ -10,9 +10,5 @@ import (
 func main() {
 	conf.SetEnv()
 	router := route.Init()
-	var port = conf.APPPORT
-	if port == "" {
-		port = os.Getenv("PORT")
-	}
-	router.Start(":" + port)
+	router.Start(":" + os.Getenv("PORT"))
 }
