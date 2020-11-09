@@ -24,5 +24,5 @@ func createSession() *gorm.DB {
 }
 
 func _createDsn() string {
-	return "host=" + conf.HOST + " user=" + conf.USER + " password=" + conf.PASS + " dbname=" + conf.DB + " port=" + conf.PORT + " sslmode=disable TimeZone=Asia/Tokyo"
+	return "host=" + conf.DBHOST + " user=" + conf.DBUSER + " password=" + conf.DBPASS + " dbname=" + conf.DBNAME + " port=" + conf.DBPORT + " sslmode=disable TimeZone=Asia/Tokyo"
 }
