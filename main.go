@@ -8,5 +8,11 @@ import (
 func main() {
 	conf.SetEnv()
 	router := route.Init()
-	router.Start(":" + conf.APPPORT)
+	var port string
+	if conf.APPPORT != "" {
+		port = ":" + conf.APPPORT
+	} else {
+		port = ""
+	}
+	router.Start(port)
 }
