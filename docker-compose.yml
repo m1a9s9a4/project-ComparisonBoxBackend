@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    build: ./docker/api
+    container_name: api
+    command: "realize start --run"
+    volumes:
+      - ./:/app # dockerコンテナ上の変更をローカルのmacに保存
+    ports:
+      - 8080:8080 # 開放するポート
+    depends_on: # dbコンテナに接続する ビルドするのもdbコンテナが立ち上がってからになる
+      - db
+
+  db:
+    build: ./docker/db/
+    ports:
+        - 5432:5432
+    volumes:
+      - "./sqls/init:/docker-entrypoint-initdb.d"
+    environment:
+      - POSTGRES_DATABASE=comparision_box
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
