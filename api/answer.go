@@ -14,7 +14,7 @@ func SaveAnswer() echo.HandlerFunc {
 		answer := new(model.Answer)
 		tx := c.Get("Tx").(*gorm.DB)
 		if err := c.Bind(answer); err != nil {
-			return err
+			return echo.NewHTTPError(http.StatusNotFound, err)
 		}
 
 		if err := answer.Save(tx); err != nil {

@@ -1,8 +1,6 @@
 package middleware
 
 import (
-	"log"
-
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
@@ -16,7 +14,6 @@ func TransactionHandler(db *gorm.DB) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return echo.HandlerFunc(func(c echo.Context) error {
 			tx := db.Begin()
-			log.Println(tx)
 			c.Set(TxKey, tx)
 
 			if err := next(c); err != nil {

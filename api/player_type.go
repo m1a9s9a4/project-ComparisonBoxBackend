@@ -12,14 +12,25 @@ import (
 func FirstPlayerTypeById() echo.HandlerFunc {
 	return func(c echo.Context) (err error) {
 		ID, err := strconv.ParseInt(c.Param("id"), 0, 64)
-		tx := c.Get("Tx").(*gorm.DB)
+		db := c.Get("Tx").(*gorm.DB)
 
 		pt := new(model.PlayerType)
-		if err = pt.FirstById(tx, ID); err != nil {
-			// change error message to each situaction
+		if err = pt.FirstById(db, ID); err != nil {
 			return echo.NewHTTPError(http.StatusNotFound, "error occured")
 		}
 
 		return c.JSON(http.StatusOK, pt)
+	}
+}
+
+func GetPlayersByPlayerTypeId() echo.HandlerFunc {
+	return func(c echo.Context) (err error) {
+		db := c.Get("Tx").(*gorm.DB)
+		ptwp := new(model.PlayerTypes)
+		if err = ptwp.GetWithPlayers(db); err != nil {
+			return echo.NewHTTPError(http.StatusNotFound, "error occured")
+		}
+
+		return c.JSON(http.StatusOK, ptwp)
 	}
 }

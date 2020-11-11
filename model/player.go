@@ -7,13 +7,17 @@ import (
 type Player struct {
 	gorm.Model
 	ID       int    `gorm:"primary_key" json:"id"`
-	Japanese string `json:"japanese"`
-	English  string `json:"english"`
-	Img      string `json:"img"`
-	TypeID   *int   `json:"type_id"`
+	Japanese string `gorm:"japanese"`
+	English  string `gorm:"english"`
+	Img      string `gorm:"img"`
+	TypeID   uint   `gorm:"type_id"`
 }
 
 const PlayerTable = "player"
+
+func (Player) TableName() string {
+	return "player"
+}
 
 func (p *Player) FirstById(db *gorm.DB, id int64) error {
 	rslt := db.Table(PlayerTable).Where("id = ?", id).First(&p)
