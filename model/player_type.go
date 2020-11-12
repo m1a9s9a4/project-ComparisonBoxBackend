@@ -5,12 +5,11 @@ import (
 )
 
 type PlayerType struct {
-	gorm.Model
-	ID       uint     `gorm:"id"`
-	Japanese string   `gorm:"japanese"`
-	English  string   `gorm:"english"`
-	ParentID uint64   `gorm:"parent_id"`
-	Players  []Player `gorm:"foreignKey:TypeID; references:ID"`
+	ID       uint   `json:"id"`
+	Japanese string `json:"japanese"`
+	English  string `json:"english"`
+	ParentID uint64 `json:"parent_id"`
+	// Players  []Player `json:"foreignKey:TypeID; references:ID"`
 }
 
 type PlayerTypes []PlayerType
@@ -25,6 +24,13 @@ func (pt *PlayerType) FirstById(db *gorm.DB, ID int64) error {
 	rslt := db.Table(PlayerTypeTable).Where("id = ?", ID).First(&pt)
 	if rslt.Error != nil {
 		return rslt.Error
+	}
+	return nil
+}
+
+func (pts *PlayerTypes) Get(db *gorm.DB) error {
+	if err := db.Find(&pts).Error; err != nil {
+		return err
 	}
 	return nil
 }

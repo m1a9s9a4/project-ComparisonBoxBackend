@@ -34,3 +34,14 @@ func GetPlayersByPlayerTypeId() echo.HandlerFunc {
 		return c.JSON(http.StatusOK, ptwp)
 	}
 }
+
+func GetPlayers() echo.HandlerFunc {
+	return func(c echo.Context) (err error) {
+		db := c.Get("Tx").(*gorm.DB)
+		pts := new(model.PlayerTypes)
+		if err := pts.Get(db); err != nil {
+			return echo.NewHTTPError(http.StatusNotFound, "error occured")
+		}
+		return c.JSON(http.StatusOK, pts)
+	}
+}

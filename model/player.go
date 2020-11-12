@@ -5,12 +5,11 @@ import (
 )
 
 type Player struct {
-	gorm.Model
-	ID       int    `gorm:"primary_key" json:"id"`
-	Japanese string `gorm:"japanese"`
-	English  string `gorm:"english"`
-	Img      string `gorm:"img"`
-	TypeID   uint   `gorm:"type_id"`
+	ID       int    `json:"id"`
+	Japanese string `json:"japanese"`
+	English  string `json:"english"`
+	Img      string `json:"img"`
+	TypeID   uint   `json:"type_id"`
 }
 
 const PlayerTable = "player"
