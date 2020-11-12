@@ -1,14 +1,67 @@
 INSERT INTO player_type (id, japanese, english) VALUES (1, 'プログラミング言語', 'programming language');
+INSERT INTO player_type (id, japanese, english, parent_id) VALUES (2, 'Webフレームワーク', 'Web Framework', 1);
+INSERT INTO player_type (id, japanese, english, parent_id) VALUES (3, 'JSフレームワーク', 'JS Framework', 2);
 
 INSERT INTO player (id, japanese, english, img, type_id) VALUES (1, 'php', 'php', 'https://www.php.net//images/logos/new-php-logo.svg', 1);
 INSERT INTO player (id, japanese, english, img, type_id) VALUES (2, 'golang', 'golang', 'https://cdn.svgporn.com/logos/go.svg', 1);
 INSERT INTO player (id, japanese, english, img, type_id) VALUES (3, 'vue.js', 'vue.js', 'https://cdn.svgporn.com/logos/vue.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (4, 'Scala', 'Scala', 'https://cdn.svgporn.com/logos/scala.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (5, 'Lua', 'Lua', 'https://cdn.svgporn.com/logos/lua.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (6, 'Python', 'Python', 'https://cdn.svgporn.com/logos/python.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (7, 'Dart', 'Dart', 'https://cdn.svgporn.com/logos/dart.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (8, 'Java', 'Java', 'https://cdn.svgporn.com/logos/java.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (9, 'Perl', 'Perl', 'https://cdn.svgporn.com/logos/perl.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (10, 'Node.js', 'Node.js', 'https://cdn.svgporn.com/logos/nodejs.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (11, 'Elm', 'Elm', 'https://cdn.svgporn.com/logos/elm.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (12, 'Erlang', 'Erlang', 'https://cdn.svgporn.com/logos/erlang.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (13, 'Haskell', 'Haskell', 'https://cdn.svgporn.com/logos/haskell.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (14, 'javascript', 'javascript', 'https://cdn.svgporn.com/logos/javascript.svg', 1);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (15, 'Microsoft ASP.NET', 'Microsoft ASP.NET', 'https://cdn.svgporn.com/logos/dotnet.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (16, 'Ruby on Rails', 'Ruby on Rails', 'https://cdn.svgporn.com/logos/rails.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (17, 'Laravel', 'Laravel', 'https://cdn.svgporn.com/logos/laravel.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (18, 'Express', 'Express', 'https://cdn.svgporn.com/logos/express.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (19, 'CodeIgniter', 'CodeIgniter', 'https://cdn.svgporn.com/logos/codeigniter.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (20, 'Django', 'Django', 'https://cdn.svgporn.com/logos/django.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (21, 'Symfony', 'Symfony', 'https://cdn.svgporn.com/logos/symfony.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (22, 'Next.js', 'Next.js', 'https://cdn.svgporn.com/logos/nextjs.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (23, 'Yii', 'Yii', 'https://cdn.svgporn.com/logos/yii.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (24, 'Spring', 'Spring', 'https://cdn.svgporn.com/logos/spring.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (25, 'Meteor', 'Meteor', 'https://cdn.svgporn.com/logos/meteor.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (26, 'Flask', 'Flask', 'https://cdn.svgporn.com/logos/flask.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (27, 'Phoenix', 'Phoenix', 'https://cdn.svgporn.com/logos/phoenix.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (28, 'Sails.js', 'Sails.js', 'https://cdn.svgporn.com/logos/sails.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (29, 'Vaadin', 'Vaadin', 'https://cdn.svgporn.com/logos/vaadin.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (30, 'Play', 'Play', 'https://cdn.svgporn.com/logos/play.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (31, 'Lift', 'Lift', 'https://cdn.svgporn.com/logos/liftweb.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (32, 'CakePHP', 'CakePHP', 'https://cdn.svgporn.com/logos/cakephp.svg', 2);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (33, 'Socket.io', 'Socket.io', 'https://cdn.svgporn.com/logos/socket.io.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (34, 'Svelte', 'Svelte', 'https://cdn.svgporn.com/logos/svelte.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (35, 'React', 'React', 'https://cdn.svgporn.com/logos/react.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (36, 'BEM', 'BEM', 'https://cdn.svgporn.com/logos/bem.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (37, 'MooTools', 'MooTools', 'https://cdn.svgporn.com/logos/mootools.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (38, 'Polymer', 'Polymer', 'https://cdn.svgporn.com/logos/polymer.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (39, 'RequireJS', 'RequireJS', 'https://cdn.svgporn.com/logos/require.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (40, 'Elm', 'Elm', 'https://cdn.svgporn.com/logos/elm.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (41, 'Marionette.js', 'Marionette.js', 'https://cdn.svgporn.com/logos/marionette.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (42, 'Knockout.js', 'Knockout.js', 'https://cdn.svgporn.com/logos/knockout.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (43, 'Element UI', 'Element UI', 'https://cdn.svgporn.com/logos/elemental-ui.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (44, 'Nuxt.js', 'Nuxt.js', 'https://cdn.svgporn.com/logos/nuxt.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (45, 'Meteor', 'Meteor', 'https://cdn.svgporn.com/logos/meteor.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (46, 'Gatsby', 'Gatsby', 'https://cdn.svgporn.com/logos/gatsby.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (47, 'Riot', 'Riot', 'https://cdn.svgporn.com/logos/riot.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (48, 'Aurelia', 'Aurelia', 'https://cdn.svgporn.com/logos/aurelia.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (49, 'Sencha Touch', 'Sencha Touch', 'https://cdn.svgporn.com/logos/sencha.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (50, 'Moon', 'Moon', 'https://cdn.svgporn.com/logos/moon.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (51, 'Angular', 'Angular', 'https://cdn.svgporn.com/logos/angular.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (52, 'Redux', 'Redux', 'https://cdn.svgporn.com/logos/redux.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (53, 'Handlebars', 'Handlebars', 'https://cdn.svgporn.com/logos/handlebars.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (54, 'Ember.js', 'Ember.js', 'https://cdn.svgporn.com/logos/ember-tomster.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (55, 'InfernoJS', 'InfernoJS', 'https://cdn.svgporn.com/logos/inferno.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (56, 'Backbone.js', 'Backbone.js', 'https://cdn.svgporn.com/logos/backbone.svg', 3);
+INSERT INTO player (id, japanese, english, img, type_id) VALUES (57, 'Ruby', 'Ruby', 'https://cdn.svgporn.com/logos/ruby.svg', 1);
 
 
-INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 2);
-INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 3);
-INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 3);
-
+-- type_id = 1
 INSERT INTO question (japanese, english, player_type_id) VALUES (
     '書きやすさ', 'Easy to write', 1
 );
@@ -46,7 +99,86 @@ INSERT INTO question (japanese, english, player_type_id) VALUES (
     '公式ドキュメントが充実している', 'Better official documentation', 1
 );
 
+-- type_id = 2
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '書きやすさ', 'Easy to write', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '書くのが楽しい', 'Fun to write', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '初学者にとっての習得しやすい', 'Easy to study for beginners?', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '情報が豊富（書籍、ネット含め）', 'Have many information in web or anykind', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '処理速度が速い', 'Fast process', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '開発環境構築がしやすい', 'Easy to create development environment', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'コミュニティが充実している', 'Great community', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '個人開発で使いやすい', 'Recommend for Personal Development', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'チーム開発におすすめ', 'Recommend for Team Development?', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'ライブラリが充実している', 'Which one is recommended to study for beginners?', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'APIを作りやすい', 'Easy to create an API', 2
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '公式ドキュメントが充実している', 'Better official documentation', 2
+);
+
+-- type_id = 3
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '書きやすさ', 'Easy to write', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '書くのが楽しい', 'Fun to write', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '初学者にとっての習得しやすい', 'Easy to study for beginners?', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '情報が豊富（書籍、ネット含め）', 'Have many information in web or anykind', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '処理速度が速い', 'Fast process', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '開発環境構築がしやすい', 'Easy to create development environment', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'コミュニティが充実している', 'Great community', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '個人開発で使いやすい', 'Recommend for Personal Development', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'チーム開発におすすめ', 'Recommend for Team Development?', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'ライブラリが充実している', 'Which one is recommended to study for beginners?', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    'APIを作りやすい', 'Easy to create an API', 3
+);
+INSERT INTO question (japanese, english, player_type_id) VALUES (
+    '公式ドキュメントが充実している', 'Better official documentation', 3
+);
+
 -- type_id = 1
+INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 2);
+INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 3);
+INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 3);
 INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 4);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 5);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 6);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 7);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 8);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 9);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 10);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 11);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 12);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 13);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 14);	INSERT INTO battle (player_1_id, player_2_id) VALUES (1, 57);
 INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 4);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 5);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 6);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 7);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 8);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 9);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 10);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 11);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 12);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 13);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 14);	INSERT INTO battle (player_1_id, player_2_id) VALUES (2, 57);
 INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 4);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 5);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 6);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 7);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 8);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 9);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 10);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 11);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 12);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 13);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 14);	INSERT INTO battle (player_1_id, player_2_id) VALUES (3, 57);

@@ -11,11 +11,12 @@ CREATE TABLE player_type (
     FOREIGN KEY (parent_id) REFERENCES player_type (id)
 );
 CREATE INDEX on player_type (id, parent_id);
+create UNIQUE index player_type_unique_index on player_type(japanese, english);
 
 CREATE TABLE player (
     id SERIAL NOT NULL,
-    japanese varchar(100) NOT NULL UNIQUE,
-    english varchar(100) NOT NULL UNIQUE,
+    japanese varchar(100) NOT NULL,
+    english varchar(100) NOT NULL,
     type_id INT NOT NULL,
     img text NOT NULL,
     created_at timestamp WITHOUT time zone DEFAULT CURRENT_TIMESTAMP,
@@ -24,6 +25,7 @@ CREATE TABLE player (
     FOREIGN KEY (type_id) REFERENCES player_type (id)
 );
 create INDEX on player(japanese, english, type_id);
+create UNIQUE index player_unique_index on player(japanese, english, type_id);
 
 
 CREATE TABLE battle (
@@ -35,13 +37,13 @@ CREATE TABLE battle (
     FOREIGN KEY (player_2_id) REFERENCES player (id),
     PRIMARY KEY (id)
 );
-CREATE UNIQUE INDEX player_unique_index on battle(player_1_id, player_2_id);
+CREATE UNIQUE INDEX battle_unique_index on battle(player_1_id, player_2_id);
 create index on battle(player_1_id, player_2_id);
 
 CREATE TABLE question (
     id SERIAL NOT NULL,
-    japanese varchar(100) NOT NULL UNIQUE,
-    english varchar(100) NOT NULL UNIQUE,
+    japanese varchar(100) NOT NULL,
+    english varchar(100) NOT NULL,
     player_type_id INT NOT NULL,
     created_at timestamp WITHOUT time zone DEFAULT CURRENT_TIMESTAMP,
     deleted_at timestamp WITHOUT time zone DEFAULT NULL,
@@ -49,8 +51,7 @@ CREATE TABLE question (
     PRIMARY KEY (id)
 );
 CREATE INDEX on question(player_type_id);
-CREATE UNIQUE INDEX japanese_unique_index on question(japanese);
-CREATE UNIQUE INDEX english_unique_index on question(english);
+CREATE UNIQUE INDEX question_unique_index on question(japanese, english, player_type_id);
 
 CREATE TABLE answer (
     id SERIAL NOT NULL,
