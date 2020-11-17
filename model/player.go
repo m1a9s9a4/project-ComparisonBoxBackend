@@ -43,3 +43,16 @@ func (ps *Players) GetByTypeId(db *gorm.DB, typeID int64) error {
 	}
 	return nil
 }
+
+func (ps *Players) GetByWord(db *gorm.DB, word string) error {
+	rslt := db.
+		Table(PlayerTable).
+		Where("english LIKE ?", "%"+word+"%").
+		Or(db.Where("japanese LIKE ?", "%"+word+"%")).
+		Or(db.Where("img LIKE ?", "%"+word+"%")).
+		Find(&ps)
+	if rslt.Error != nil {
+		return rslt.Error
+	}
+	return nil
+}

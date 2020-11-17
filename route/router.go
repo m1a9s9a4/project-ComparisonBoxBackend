@@ -40,6 +40,7 @@ func Init() *echo.Echo {
 		v1.GET("/answer/battle/:bid", api.GetAnswersByBattleId())
 		v1.GET("/answer/battle/:bid/count", api.GetCountEachQuestions())
 		v1.GET("/answer/battle/:bid/:qid/count", api.CountEachQuestionId())
+		v1.GET("/search/:word", api.SearchByWord())
 
 		v1.POST("/answer", api.SaveAnswer())
 		v1.POST("/answer/user", api.SaveAnsweredUser())

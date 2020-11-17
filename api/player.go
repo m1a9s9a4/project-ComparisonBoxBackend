@@ -1,7 +1,6 @@
 package api
 
 import (
-	"log"
 	"net/http"
 	"strconv"
 
@@ -43,8 +42,6 @@ func GetPlayersByTypeId() echo.HandlerFunc {
 func FirstPlayerByEnglish() echo.HandlerFunc {
 	return func(c echo.Context) (err error) {
 		english := c.Param("english")
-		log.Println("english")
-		log.Println(english)
 		tx := c.Get("Tx").(*gorm.DB)
 		player := new(model.Player)
 		if err = player.GetByEnglish(tx, english); err != nil {
